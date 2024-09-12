@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Belanja</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar .logo a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .navbar .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar .menu li {
+            margin-left: 20px;
+        }
+
+        .navbar .menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .main-content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            gap: 3rem;
+        }
+
+        .product-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .product-item h3 {
+            margin: 15px 0;
+            font-size: 22px;
+        }
+
+        .product-item p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .product-item .stats {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+
+        .product-item .stats span {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .product-item .read-more {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .product-item .read-more:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-media a {
+            margin-right: 10px;
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="#">NikePlace<i class="ri-check-fill"></i></a>
+                </div>
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produk">Produk</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-content" id="home">
+        <h1>Selamat datang di NikePlace!</h1>
+        <p>Kami menyediakan berbagai macam sepatu yang tepat sesuai kebutuhan anda.</p>
+    </div>
+
+    <div class="main-content" id="produk">
+        <h1>Produk Terbaru Kami</h1>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="img/v2k.png" alt="Produk 1">
+                <h3>Nike V2K Run</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure culpa molestiae iusto. Quod vel in delectus recusandae. Tempora delectus similique hic aut sit. Inventore illo eveniet, saepe rem non aperiam?
+                </p>
+                <div class="stats">
+                    <span><i class="ri-shopping-basket-2-fill"></i>120</span>
+                    <span><i class="ri-heart-fill"></i>250</span>
+                </div>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+
+            <div class="product-item">
+                <img src="img/p-6000.png" alt="Produk 2">
+                <h3>Nike P-6000</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure culpa molestiae iusto. Quod vel in delectus recusandae. Tempora delectus similique hic aut sit. Inventore illo eveniet, saepe rem non aperiam?</p>
+                <div class="stats">
+                    <span><i class="ri-shopping-basket-2-fill"></i>98</span>
+                    <span><i class="ri-heart-fill"></i>180</span>
+                </div>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+
+            <div class="product-item">
+                <img src="img/zoom-vomero-5.png" alt="Produk 3">
+                <h3>Nike Zoom Vomero 5</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure culpa molestiae iusto. Quod vel in delectus recusandae. Tempora delectus similique hic aut sit. Inventore illo eveniet, saepe rem non aperiam?</p>
+                <div class="stats">
+                    <span><i class="ri-shopping-basket-2-fill"></i>150</span>
+                    <span><i class="ri-heart-fill"></i>300</span>
+                </div>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    <p>&copy; 2023 NikePlace. All rights reserved.</p>
+    <div class="social-media">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-twitter-fill"></i></a>
+        <a href="#"><i class="ri-instagram-fill"></i></a>
+    </div>
+</footer>
+
+</html>

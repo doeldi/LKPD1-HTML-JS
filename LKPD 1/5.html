@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        #timer {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+        button:disabled {
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Timer</h2>
+    <div id="timer">10</div>
+    <div class="controls">
+        <button id="start">Start</button>
+        <button id="stop" disabled>Stop</button>
+    </div>
+
+    <script>
+        let timeInSeconds = 10;
+        let timerInterval;
+
+        const timerElement = document.getElementById('timer');
+        const start = document.getElementById('start');
+        const stop = document.getElementById('stop');
+
+        function updateTimer() {
+            if (timeInSeconds > 0) {
+                timeInSeconds--;
+                timerElement.textContent = timeInSeconds;
+            } else {
+                clearInterval(timerInterval);
+                timerElement.textContent = "Waktu habis!";
+                start.disabled = false;
+                stop.disabled = true;
+            }
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(updateTimer, 1000);
+            start.disabled = true;
+            stop.disabled = false;
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+            start.disabled = false;
+            stop.disabled = true;
+        }
+
+        start.addEventListener('click', startTimer);
+        stop.addEventListener('click', stopTimer);
+    </script>
+
+</body>
+</html>

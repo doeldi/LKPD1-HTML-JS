@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Input Date</title>
+</head>
+<body>
+    <h1>Search Input Date</h1>
+    <form id="searchForm">
+        <label for="searchDate">Select a date:</label>
+        <input type="date" id="searchDate" name="searchDate" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const searchDate = document.getElementById('searchDate').value;
+
+            document.getElementById('result').textContent = `Mencari data tanggal: ${searchDate}`;
+        });
+    </script>
+</body>
+</html>
